@@ -1,0 +1,72 @@
+问题及其业务需求
+要素	内容
+ID	P1
+提出者	买家、卖家
+关联者	卖家、买家
+问题	买家和卖家不能直接交流
+影响	买家和卖家无法得知交易细节，可能认为被中间商赚了差价，导致对系统的不信任
+目标	买卖方直接交流
+
+要素	内容
+ID	P2
+提出者	卖家
+关联者	卖家、估值人员
+问题	卖方不清楚车辆价值
+影响	卖家认为自己的车估价过低，会被低买高卖从而拒绝在本系统上出售车辆
+目标	用户能够通过第三方估值机构进行车辆估值
+
+目标描述
+G4：交易透明化
+　　　Goal Achieve[TradeTransparent]
+　　　类型：SatisfactionGoal
+　　　非正式定义：交易透明化
+　　　关注：Trade, Transparent
+　　　正式定义：?c:TradeTransparent
+　　　Transparent(c)
+　　　=>□TransparentState(c)=true
+　　　
+G4-1: 买卖方直接交流
+　　　Goal Achieve[UserDirectCommunication]
+　　　类型: SatisfactionGoal
+　　　非正式定义：用户可以和其他用户直接交流
+　　　关注：User,Communication
+　　　正式定义：?c:User
+　　　Communication(c)
+　　　=>□Accessiable(c)
+　　　
+G4-2: 车辆评估可信
+　　　Goal Achieve[EvaluationTrusted]
+　　　类型: SatisfactionGoal
+　　　非正式定义：车辆评估可信
+　　　关注：User,Evaluation
+　　　正式定义：?c:User, m:Evaluation
+　　　Trusted(c)
+　　　=>◇c.trust(m)=true
+　　　
+G4-1-1: 用户平台内交流
+　　　Goal Achieve[CommunicationOnThisPlatform]
+　　　类型: SatisfactionGoal
+　　　非正式定义：用户能够在本平台内与其他用户交流
+　　　关注：User 
+　　　正式定义：c:User 
+　　　CommunicationOnPlatform(c)
+　　　=>□Accessiable(c)
+
+G4-1-2: 获得用户联系方式
+　　　Goal Maintain[ContactInfomation]
+　　　类型: SatisfactionGoal
+　　　非正式定义：用户能够获得其他用户联系方式
+　	  关注：User 
+　　　正式定义：c:User
+	  GetContact(c)
+	  =>□GetContactInformation(c)
+
+G4-2-1：第三方评估
+　　Goal Achieve[OtherEvaluation]
+　　类型：SatisfactionGoal
+　　非正式定义：卖方申请出售二手车，二手车须经过第三方评估
+　　关注： Seller, Car
+　　正式定义：? s:Seller c:Car
+			s.applyForSelling(c)
+		  	=>◇ testByThirdParty(c)
+
