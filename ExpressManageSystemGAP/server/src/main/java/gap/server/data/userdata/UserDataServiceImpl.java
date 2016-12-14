@@ -283,7 +283,6 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// 设置上次付款日期，这个属性只有财务人员用到，所以特意标注一下
 			Date lastPayDate = re.getDate(lastpaid_f);
 			po.setLastPayDate(lastPayDate);
-
 			return po;
 		} catch (SQLException e) {
 			// TODO 自动生成的 catch 块
