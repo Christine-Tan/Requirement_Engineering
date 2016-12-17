@@ -23,7 +23,7 @@ public class SalaryDataServiceImpl extends UnicastRemoteObject implements
 	// 表名
 	private String tablename = "salary";
 	// 字段
-	private String id_f = "id", usertype_f = "userType", salary_f = "salary";
+	private String id_f = "id", usertype_f = "user_type", salary_f = "salary";
 	private InsertSQL insertSQL;
 	private UpdateSQL updateSQL;
 	public static SalaryDataService instance;

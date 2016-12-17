@@ -30,7 +30,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 	// 字段
 	private String id_f = "id", username_f = "username",
 			password_f = "password", institution_f = "institution",
-			rank_f = "rank", userType_f = "userType", name_f = "name",
+			rank_f = "rank", userType_f = "user_type", name_f = "name",
 			gender_f = "gender", lastpaid_f = "lastpaid";
 	private InsertSQL insertSQL;
 	private UpdateSQL updateSQL;

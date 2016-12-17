@@ -17,7 +17,7 @@ public class TransFareDataImpl extends UnicastRemoteObject implements
 	private static TransFareDataImpl transFareDataImpl;
 
 	public final String tableName = "transfare";
-	public final String ID_col = "ID";
+	public final String ID_col = "id";
 	public final String driverID_col = "driver_id";
 	public final String money_col = "money";
 	public final String orderID_col = "order_id";

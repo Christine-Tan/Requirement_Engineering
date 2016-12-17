@@ -1,19 +1,7 @@
 package gap.client.ui.gapcomponents;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.*;
+import java.awt.*;
 
 public class GAPConnectDialog extends JDialog {
 	private static final int WIDTH = 500, HEIGHT = 300;
@@ -28,22 +16,22 @@ public class GAPConnectDialog extends JDialog {
 
 	public GAPConnectDialog(Frame frame) {
 		super(frame, "网络连接", false);
-		try {
-			UIManager
-					.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-		} catch (ClassNotFoundException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-		} catch (UnsupportedLookAndFeelException e) {
-			// TODO 自动生成的 catch 块
-			e.printStackTrace();
-		}
+//		try {
+//			UIManager
+//					.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//		} catch (ClassNotFoundException e) {
+//			// TODO 自动生成的 catch 块
+//			e.printStackTrace();
+//		} catch (InstantiationException e) {
+//			// TODO 自动生成的 catch 块
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
+//			// TODO 自动生成的 catch 块
+//			e.printStackTrace();
+//		} catch (UnsupportedLookAndFeelException e) {
+//			// TODO 自动生成的 catch 块
+//			e.printStackTrace();
+//		}
 		this.frame = frame;
 		textArea = new JTextArea();
 		textArea.setBackground(Color.white);

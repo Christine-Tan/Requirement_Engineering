@@ -13,8 +13,8 @@ import java.sql.SQLException;
 
 public class FlexSectorDataServiceImpl implements FlexSectorDataService {
 	private String tableName = "sector_flex";
-	private String sector_id_f = "sector_id", beginshelf_f = "beginshelf",
-			endshelf_f = "endshelf", belong_sec_id_f = "belong_sec_id",
+	private String sector_id_f = "sector_id", beginshelf_f = "begin_shelf",
+			endshelf_f = "end_shelf", belong_sec_id_f = "belong_sec_id",
 			used_f = "used";
 
 	private InsertSQL insert;

@@ -45,7 +45,7 @@ public class ExpressOrderDataServiceImpl extends UnicastRemoteObject implements
 	// expressorder表字段名
 	private String order_id_f = "order_id", current_ins_id_f = "currentIns_id",
 			target_ins_id_f = "targetIns_id", received_f = "received",
-			passed_f = "passed", isTransed_f = "isTransed",
+			passed_f = "passed", isTransed_f = "isTransferred",
 			sender_info_f = "sender_info", receiver_info_f = "receiver_info",
 			order_type_f = "order_type", cargo_info_f = "cargo_info",
 			price_f = "price", delivery_id_f = "delivery_id",
@@ -58,7 +58,7 @@ public class ExpressOrderDataServiceImpl extends UnicastRemoteObject implements
 	private String info_name_f = "name", info_phone_f = "phone",
 			info_depart_f = "department", info_address_f = "address";
 	// cargo_info 表字段名
-	private String cargo_name_f = "cargoName", cargo_num_f = "numbers",
+	private String cargo_name_f = "cargo_name", cargo_num_f = "numbers",
 			cargo_weight_f = "weight", cargo_volume = "volume";
 	// address表字段名
 	private String add_id_f = "id", add_province_f = "province",

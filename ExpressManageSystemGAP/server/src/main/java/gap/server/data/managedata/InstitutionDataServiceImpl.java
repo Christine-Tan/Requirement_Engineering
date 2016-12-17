@@ -24,7 +24,7 @@ public class InstitutionDataServiceImpl extends UnicastRemoteObject implements
 	private String tableName = "institution";
 	// 字段
 	private String id_f = "ins_id", insname_f = "name",
-			memberNum_f = "memberNum", address_f = "address",
+			memberNum_f = "member_num", address_f = "address",
 			instype_f = "ins_type";
 
 	private InsertSQL insertSQL;

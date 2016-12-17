@@ -13,7 +13,7 @@ import java.sql.SQLException;
 public class WareHouseDataServiceImpl implements WareHouseDataService {
 	private String sectorTable = "sector";
 	private String sector_id_f = "sector_id", type_f = "type",
-			ins_id_f = "ins_id", alarmValue_f = "alarmValue", rows_f = "rows",
+			ins_id_f = "ins_id", alarmValue_f = "alarm_value", rows_f = "rows",
 			shelves_f = "shelves", units_f = "units";
 
 	private String sectorItemTable = "sector_item";

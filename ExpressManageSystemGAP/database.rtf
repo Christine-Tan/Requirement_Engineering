@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg936\cocoartf1504
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11600\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 account: Name,Balance,Income,Pay\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+sender_info: name, phone, department, address\
+\
+received_info: time, order_id, delivery_id, receiver_name, comment\
+\
+receiver_info: name, phone, department, address\
+\
+cargo_info: cargo_name, numbers, weight, volume\
+\
+address: id, province, district, city\
+\
+expressorderstate: order_id, state_time, state\
+\
+deliverytime: departure_city_id, target_city_id, cost_time, order_num, order_type\
+\
+expressorder: order_id, currentIns_id, targetIns_id, received, passed, isTransferred, sender_info, receiver_info, order_type, cargo_info, price, delivery_id, create_time\
+\
+sector_flex: sector_id, begin_shelf, end_shelf, belong_sec_id, used\
+\
+sector: sector_id, type, ins_id, alarm_value, rows, shelves, units\
+(sector_id:
+\f1 \'d7\'ee\'ba\'f3\'d2\'bb\'ce\'bb
+\f0 0 FLEX 1 CAR 2 TRAIN 3 PLANE
+\f1 \'a3\'a9
+\f0 \
+sector_item: location, sector_id, expressorder_id, time, belong_sec, destination, existed\
+\
+log: time, user_id, operate\
+\
+institution: ins_id, name, member_num, address, ins_type\
+\
+arrivedorder: order_id, des_ins_id, from_ins_id, comment, time, passed, load_order_id, is_stockin\
+\
+arrivedorderitem: expressorder_id, order_id, arrivedstate\
+\
+deliveryorder: order_id, comment, time, passed\
+\
+deliveryorderitem: expressorder_id, order_id, delivery_id\
+\
+loadorder:order_id, driver_id, guard_id, car_num, time, passed, target_ins_id, departure_ins_id, comment, isSetArrived, price\
+\
+loadorderitem: expressorder_id, order_id\
+\
+stockinorder: order_id, time, ins_id, passed\
+\
+stockinitem: expressorder_id, order_id, destination, sector_id, location\
+\
+stockoutorder: order_id, time, transport, target_ins, ins_id, passed, loaded\
+\
+stockoutitem: id, expressorder_id, order_id\
+\
+billorder: order_id, total_money, time, passed\
+\
+billorderitem:delivery_id, money, order_id\
+\
+payee: id, user_id, account, money, type, comment, payment_list, express_num\
+\
+paymentlist: id, total, payer, date, passed\
+\
+city: id, name, latitude, longitude, province_id\
+\
+price: id, city_id, express: standard, economic, base\
+\
+rent: money, lastPaid, institution_id\
+\
+salary: id, user_type, salary\
+\
+car: car_id, car_num, institution_id, server_time\
+\
+driver: id, name, institution, birth, driving_license_due, phone, identity_num, gender\
+\
+transfare: id, driver_id, money, order_id\
+\
+user: id, username, password, institution, rank, user_type, name, gender, last paid\
+\
+}

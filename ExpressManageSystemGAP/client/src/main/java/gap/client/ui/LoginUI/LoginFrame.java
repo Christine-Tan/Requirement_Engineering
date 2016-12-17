@@ -24,8 +24,8 @@ public class LoginFrame extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    UIManager
-                            .setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//                    UIManager
+//                            .setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
                     final LoginFrame frame = new LoginFrame();
                     NetModule.initial(frame);
                     new Thread(new Runnable() {

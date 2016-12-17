@@ -26,10 +26,10 @@ public class AccountDataServiceImpl extends UnicastRemoteObject implements
 	 */
 	private static final long serialVersionUID = 1L;
 	public final String tableName = "account";
-	public final String Name_Col = "Name";
-	public final String Balance_Col = "Balance";
-	public final String Income_Col = "Income";
-	public final String Pay_Col = "Pay";
+	public final String Name_Col = "name";
+	public final String Balance_Col = "balance";
+	public final String Income_Col = "income";
+	public final String Pay_Col = "pay";
 	private SQLBuilder builder = new SQLBuilder();
 	private static AccountDataServiceImpl accountDataService;
 
