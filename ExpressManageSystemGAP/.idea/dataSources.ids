@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - expressmanagesystem@localhost" uuid="96fdbc8f-2186-4e95-8994-dc556dff54aa">
+    <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="expressmanagesystem"/>
+      <table id="2" parent="1" name="account"/>
+      <table id="3" parent="1" name="address"/>
+      <table id="4" parent="1" name="arrivedorder"/>
+      <table id="5" parent="1" name="arrivedorderitem"/>
+      <table id="6" parent="1" name="billorder"/>
+      <table id="7" parent="1" name="billorderitem"/>
+      <table id="8" parent="1" name="car"/>
+      <table id="9" parent="1" name="cargo_info"/>
+      <table id="10" parent="1" name="city"/>
+      <table id="11" parent="1" name="deliveryorder"/>
+      <table id="12" parent="1" name="deliveryorderitem"/>
+      <table id="13" parent="1" name="deliverytime"/>
+      <table id="14" parent="1" name="driver"/>
+      <table id="15" parent="1" name="expressorder"/>
+      <table id="16" parent="1" name="expressorderstate"/>
+      <table id="17" parent="1" name="initialaccountinfo"/>
+      <table id="18" parent="1" name="initialhistory"/>
+      <table id="19" parent="1" name="initialpeople_info"/>
+      <table id="20" parent="1" name="initialstockin_info"/>
+      <table id="21" parent="1" name="institution"/>
+      <table id="22" parent="1" name="loadorder"/>
+      <table id="23" parent="1" name="loadorderitem"/>
+      <table id="24" parent="1" name="log"/>
+      <table id="25" parent="1" name="payee"/>
+      <table id="26" parent="1" name="paymentlist"/>
+      <table id="27" parent="1" name="price"/>
+      <table id="28" parent="1" name="received_info"/>
+      <table id="29" parent="1" name="receiver_info"/>
+      <table id="30" parent="1" name="rent"/>
+      <table id="31" parent="1" name="salary"/>
+      <table id="32" parent="1" name="sector"/>
+      <table id="33" parent="1" name="sector_flex"/>
+      <table id="34" parent="1" name="sector_item"/>
+      <table id="35" parent="1" name="sender_info"/>
+      <table id="36" parent="1" name="stockinitem"/>
+      <table id="37" parent="1" name="stockinorder"/>
+      <table id="38" parent="1" name="stockoutitem"/>
+      <table id="39" parent="1" name="stockoutorder"/>
+      <table id="40" parent="1" name="transfare"/>
+      <table id="41" parent="1" name="user"/>
+      <table id="42" parent="1" name="province"/>
+      <table id="43" parent="1" name="district"/>
+      <column id="44" parent="2" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="45" parent="2" name="balance">
+        <data-type>double</data-type>
+      </column>
+      <column id="46" parent="2" name="income">
+        <data-type>double</data-type>
+      </column>
+      <column id="47" parent="2" name="pay">
+        <data-type>double</data-type>
+      </column>
+      <column id="48" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="49" parent="3" name="province">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="50" parent="3" name="city">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="51" parent="3" name="district">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="52" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="53" parent="4" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="54" parent="4" name="des_ins_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="55" parent="4" name="from_ins_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="56" parent="4" name="comment">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="57" parent="4" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="58" parent="4" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="59" parent="4" name="load_order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="60" parent="4" name="is_stockin">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="61" parent="5" name="expressorder_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="62" parent="5" name="order_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="63" parent="5" name="arrivedstate">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="64" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="65" parent="5" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="66" parent="6" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="67" parent="6" name="total_money">
+        <data-type>double</data-type>
+      </column>
+      <column id="68" parent="6" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="69" parent="6" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="70" parent="7" name="delivery_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="71" parent="7" name="money">
+        <data-type>double</data-type>
+      </column>
+      <column id="72" parent="7" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="73" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="74" parent="7" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="8" name="car_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="76" parent="8" name="car_num">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <column id="77" parent="8" name="institution_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="78" parent="8" name="server_time">
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="79" parent="8" name="PRIMARY">
+        <columns>car_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="9" name="cargo_name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="81" parent="9" name="numbers">
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="82" parent="9" name="weight">
+        <data-type>float</data-type>
+      </column>
+      <column id="83" parent="9" name="volume">
+        <data-type>float</data-type>
+      </column>
+      <column id="84" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="85" parent="9" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="86" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="87" parent="10" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="88" parent="10" name="latitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="89" parent="10" name="longitude">
+        <data-type>double</data-type>
+      </column>
+      <column id="90" parent="10" name="province_id">
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="91" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="92" parent="11" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="93" parent="11" name="comment">
+        <data-type>text</data-type>
+      </column>
+      <column id="94" parent="11" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="95" parent="11" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="96" parent="12" name="expressorder_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="97" parent="12" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="98" parent="12" name="delivery_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="99" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="100" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="101" parent="13" name="departure_city_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="102" parent="13" name="target_city_id">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="103" parent="13" name="cost_time">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="104" parent="13" name="order_num">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="105" parent="13" name="order_type">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="106" parent="14" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="107" parent="14" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="108" parent="14" name="institution">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="109" parent="14" name="birth">
+        <data-type>date</data-type>
+      </column>
+      <column id="110" parent="14" name="driving_license_due">
+        <data-type>date</data-type>
+      </column>
+      <column id="111" parent="14" name="phone">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="112" parent="14" name="identity_num">
+        <data-type>varchar(18)</data-type>
+      </column>
+      <column id="113" parent="14" name="gender">
+        <data-type>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)</data-type>
+      </column>
+      <key id="114" parent="14" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="115" parent="15" name="order_id">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="116" parent="15" name="currentIns_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="117" parent="15" name="targetIns_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="118" parent="15" name="received">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="119" parent="15" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="120" parent="15" name="isTransferred">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="121" parent="15" name="sender_info">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="122" parent="15" name="receiver_info">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="123" parent="15" name="price">
+        <data-type>double</data-type>
+      </column>
+      <column id="124" parent="15" name="delivery_id">
+        <data-type>varchar(9)</data-type>
+      </column>
+      <column id="125" parent="15" name="create_time">
+        <data-type>date</data-type>
+      </column>
+      <column id="126" parent="15" name="order_type">
+        <data-type>enum(&apos;ECONOMIC&apos;, &apos;STANDARD&apos;, &apos;EXPRESS&apos;)</data-type>
+      </column>
+      <column id="127" parent="15" name="cargo_info">
+        <data-type>int(5)</data-type>
+      </column>
+      <column id="128" parent="16" name="order_id">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="129" parent="16" name="state_time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="130" parent="16" name="state">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="131" parent="17" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="132" parent="17" name="Name">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="133" parent="17" name="Balance">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="17" name="initialHistory">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="135" parent="17" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="136" parent="18" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="137" parent="18" name="Date">
+        <data-type>date</data-type>
+      </column>
+      <column id="138" parent="18" name="totalBusinessHall">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="139" parent="18" name="totalCenter">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="140" parent="18" name="totalCourier">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="141" parent="18" name="totalBusinessClerk">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="142" parent="18" name="totalCenterClerk">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="143" parent="18" name="totalStockman">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="144" parent="18" name="totalWarehouse">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="145" parent="18" name="totalStock">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="146" parent="18" name="totalAccount">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="147" parent="18" name="totalBalance">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="148" parent="18" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="149" parent="19" name="ID">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="150" parent="19" name="City">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="151" parent="19" name="BusinessHall">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="152" parent="19" name="Center">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="153" parent="19" name="Courier">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="154" parent="19" name="BusinessClerk">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="155" parent="19" name="CenterClerk">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="156" parent="19" name="StockMan">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="157" parent="19" name="initialHistory">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="158" parent="20" name="ID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="159" parent="20" name="Name">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="160" parent="20" name="GoodsNumber">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="161" parent="20" name="OccupiedRate">
+        <data-type>double</data-type>
+      </column>
+      <column id="162" parent="20" name="initialHistory">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="163" parent="20" name="PRIMARY">
+        <columns>ID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="164" parent="21" name="ins_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="165" parent="21" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="166" parent="21" name="member_num">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="167" parent="21" name="address">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="168" parent="21" name="ins_type">
+        <data-type>enum(&apos;BUSINESS&apos;, &apos;CENTER&apos;)</data-type>
+      </column>
+      <column id="169" parent="22" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="170" parent="22" name="driver_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="171" parent="22" name="guard_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="172" parent="22" name="car_num">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="173" parent="22" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="174" parent="22" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="175" parent="22" name="target_ind_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="176" parent="22" name="departure_ins_id">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="177" parent="22" name="comment">
+        <data-type>text</data-type>
+      </column>
+      <column id="178" parent="22" name="isSetArrived">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="179" parent="22" name="price">
+        <data-type>double</data-type>
+      </column>
+      <column id="180" parent="23" name="expressorder_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="181" parent="23" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="182" parent="23" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="183" parent="23" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="184" parent="24" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="185" parent="24" name="user_id">
+        <data-type>varchar(9)</data-type>
+      </column>
+      <column id="186" parent="24" name="operate">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="187" parent="24" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="188" parent="24" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="189" parent="25" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="190" parent="25" name="user_id">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="191" parent="25" name="account">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="192" parent="25" name="money">
+        <data-type>double</data-type>
+      </column>
+      <column id="193" parent="25" name="type">
+        <data-type>enum(&apos;DELIVERY&apos;, &apos;BUSSINESSCLERK&apos;, &apos;CENTERCLERK&apos;, &apos;INVENTORY&apos;, &apos;ACCOUNTER&apos;, &apos;MANAGER&apos;, &apos;ADMINISTRATOR&apos;)</data-type>
+      </column>
+      <column id="194" parent="25" name="comment">
+        <data-type>text</data-type>
+      </column>
+      <column id="195" parent="25" name="payment_list">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="196" parent="25" name="express_num">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="197" parent="25" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="198" parent="26" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="199" parent="26" name="total">
+        <data-type>double</data-type>
+      </column>
+      <column id="200" parent="26" name="payer">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="201" parent="26" name="date">
+        <data-type>date</data-type>
+      </column>
+      <column id="202" parent="26" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="203" parent="26" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="204" parent="27" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="205" parent="27" name="city_id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="206" parent="27" name="express">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="207" parent="27" name="standard">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="208" parent="27" name="economic">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="209" parent="27" name="base">
+        <data-type>double</data-type>
+      </column>
+      <key id="210" parent="27" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="211" parent="28" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="212" parent="28" name="order_id">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="213" parent="28" name="delivery_id">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="214" parent="28" name="receiver_name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="215" parent="28" name="comment">
+        <data-type>text</data-type>
+      </column>
+      <column id="216" parent="28" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="217" parent="28" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="218" parent="29" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="219" parent="29" name="phone">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="220" parent="29" name="department">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="221" parent="29" name="address">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="222" parent="29" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="223" parent="29" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="224" parent="30" name="money">
+        <data-type>double</data-type>
+      </column>
+      <column id="225" parent="30" name="lastPaid">
+        <data-type>date</data-type>
+      </column>
+      <column id="226" parent="30" name="institution_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="227" parent="30" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="228" parent="30" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="229" parent="31" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="230" parent="31" name="user_type">
+        <data-type>enum(&apos;DELIVERY&apos;, &apos;BUSSINESSCLERK&apos;, &apos;CENTERCLERK&apos;, &apos;INVENTORY&apos;, &apos;ACCOUNTER&apos;)</data-type>
+      </column>
+      <column id="231" parent="31" name="salary">
+        <data-type>double</data-type>
+      </column>
+      <key id="232" parent="31" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="233" parent="32" name="ins_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="234" parent="32" name="alarmValue">
+        <data-type>double</data-type>
+      </column>
+      <column id="235" parent="32" name="sector_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="236" parent="32" name="type">
+        <data-type>enum(&apos;CAR&apos;, &apos;TRAIN&apos;, &apos;PLANE&apos;, &apos;FLEX&apos;)</data-type>
+      </column>
+      <column id="237" parent="32" name="rows">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="238" parent="32" name="shelves">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="239" parent="32" name="units">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="240" parent="33" name="sector_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="241" parent="33" name="begin_shelf">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="242" parent="33" name="end_shelf">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="243" parent="33" name="belong_sec_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="244" parent="33" name="used">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="245" parent="34" name="location">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="246" parent="34" name="sector_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="247" parent="34" name="expressorder_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="248" parent="34" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="249" parent="34" name="belong_sec">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="250" parent="34" name="destination">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="251" parent="34" name="existed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="252" parent="34" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="253" parent="34" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="254" parent="35" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="255" parent="35" name="phone">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="256" parent="35" name="department">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="257" parent="35" name="address">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="258" parent="35" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="259" parent="35" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="260" parent="36" name="expressorder_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="261" parent="36" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="262" parent="36" name="destination">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="263" parent="36" name="sector_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="264" parent="36" name="location">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="265" parent="36" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="266" parent="36" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="267" parent="37" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="268" parent="37" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="269" parent="37" name="ins_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="270" parent="37" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="271" parent="38" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="272" parent="38" name="expressorder_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="273" parent="38" name="order_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="274" parent="38" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="275" parent="39" name="order_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="276" parent="39" name="time">
+        <data-type>date</data-type>
+      </column>
+      <column id="277" parent="39" name="transport">
+        <data-type>enum(&apos;CAR&apos;, &apos;PLANE&apos;, &apos;TRAIN&apos;)</data-type>
+      </column>
+      <column id="278" parent="39" name="target_ins">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="279" parent="39" name="ins_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="280" parent="39" name="passed">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <column id="281" parent="39" name="loaded">
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="282" parent="39" name="PRIMARY">
+        <columns>order_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="283" parent="40" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="284" parent="40" name="order_id">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="285" parent="40" name="driver_id">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="286" parent="40" name="money">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="287" parent="40" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="288" parent="41" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(9)</data-type>
+      </column>
+      <column id="289" parent="41" name="username">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="290" parent="41" name="password">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="291" parent="41" name="institution">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="292" parent="41" name="rank">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="293" parent="41" name="user_type">
+        <data-type>enum(&apos;DELIVERY&apos;, &apos;BUSSINESSCLERK&apos;, &apos;CENTERCLERK&apos;, &apos;INVENTORY&apos;, &apos;ACCOUNTER&apos;, &apos;MANAGER&apos;, &apos;ADMINISTRATOR&apos;)</data-type>
+      </column>
+      <column id="294" parent="41" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="295" parent="41" name="gender">
+        <data-type>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)</data-type>
+      </column>
+      <column id="296" parent="41" name="last_paid">
+        <data-type>date</data-type>
+      </column>
+      <index id="297" parent="41" name="user_id_uindex">
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="298" parent="41" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="299" parent="41" name="user_id_uindex">
+        <columns>id</columns>
+        <underlying-index>user_id_uindex</underlying-index>
+      </key>
+      <column id="300" parent="42" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="301" parent="42" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="302" parent="42" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="303" parent="43" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="304" parent="43" name="name">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="305" parent="43" name="city_id">
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="306" parent="43" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

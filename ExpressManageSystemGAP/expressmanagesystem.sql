@@ -36,6 +36,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES ('江苏省南京市栖霞区中转中心',0,0,0);
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +53,7 @@ CREATE TABLE `address` (
   `city` varchar(50) DEFAULT NULL,
   `district` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,6 +62,7 @@ CREATE TABLE `address` (
 
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
+INSERT INTO `address` VALUES (1,'江苏省','南京市','栖霞区'),(2,'江苏省','南京市','江宁区'),(3,'江苏省','南京市','鼓楼区'),(4,'江苏省','南京市','建邺区');
 /*!40000 ALTER TABLE `address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,6 +190,7 @@ CREATE TABLE `car` (
 
 LOCK TABLES `car` WRITE;
 /*!40000 ALTER TABLE `car` DISABLE KEYS */;
+INSERT INTO `car` VALUES ('0011001001','2','0011001',10);
 /*!40000 ALTER TABLE `car` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -329,7 +332,7 @@ CREATE TABLE `district` (
   `name` varchar(20) DEFAULT NULL,
   `city_id` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -338,6 +341,7 @@ CREATE TABLE `district` (
 
 LOCK TABLES `district` WRITE;
 /*!40000 ALTER TABLE `district` DISABLE KEYS */;
+INSERT INTO `district` VALUES (1,'栖霞区',1),(2,'鼓楼区',1),(3,'江宁区',1),(4,'建邺区',1);
 /*!40000 ALTER TABLE `district` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -367,6 +371,7 @@ CREATE TABLE `driver` (
 
 LOCK TABLES `driver` WRITE;
 /*!40000 ALTER TABLE `driver` DISABLE KEYS */;
+INSERT INTO `driver` VALUES ('00110011','sharemy','0011001','1996-06-14','2016-12-18','12345678900','320405199606142345','MALE');
 /*!40000 ALTER TABLE `driver` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -561,6 +566,7 @@ CREATE TABLE `institution` (
 
 LOCK TABLES `institution` WRITE;
 /*!40000 ALTER TABLE `institution` DISABLE KEYS */;
+INSERT INTO `institution` VALUES ('0010001','中转中心',20,'江苏省南京市栖霞区','CENTER'),('0010002','中转中心',20,'江苏省南京市鼓楼区','CENTER'),('0010003','中转中心',20,'江苏省南京市江宁区','CENTER'),('0010004','中转中心',20,'江苏省南京市建邺区','CENTER'),('0011001','营业厅',30,'江苏省南京市栖霞区','BUSINESS'),('0011002','营业厅',30,'江苏省南京市鼓楼区','BUSINESS'),('0011003','营业厅',30,'江苏省南京市江宁区','BUSINESS'),('0011004','营业厅',30,'江苏省南京市建邺区','BUSINESS');
 /*!40000 ALTER TABLE `institution` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -714,7 +720,7 @@ CREATE TABLE `price` (
   `economic` int(11) DEFAULT NULL,
   `base` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -723,6 +729,7 @@ CREATE TABLE `price` (
 
 LOCK TABLES `price` WRITE;
 /*!40000 ALTER TABLE `price` DISABLE KEYS */;
+INSERT INTO `price` VALUES (1,1,5,3,4,0.5);
 /*!40000 ALTER TABLE `price` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -737,7 +744,7 @@ CREATE TABLE `province` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -746,6 +753,7 @@ CREATE TABLE `province` (
 
 LOCK TABLES `province` WRITE;
 /*!40000 ALTER TABLE `province` DISABLE KEYS */;
+INSERT INTO `province` VALUES (1,'江苏省'),(2,'上海'),(3,'四川省');
 /*!40000 ALTER TABLE `province` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -815,7 +823,7 @@ CREATE TABLE `rent` (
   `institution_id` varchar(20) DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -824,6 +832,7 @@ CREATE TABLE `rent` (
 
 LOCK TABLES `rent` WRITE;
 /*!40000 ALTER TABLE `rent` DISABLE KEYS */;
+INSERT INTO `rent` VALUES (3000,NULL,'0010001',1),(3000,NULL,'0010002',2),(2000,NULL,'0011001',3),(2000,NULL,'0011002',4);
 /*!40000 ALTER TABLE `rent` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -836,10 +845,10 @@ DROP TABLE IF EXISTS `salary`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `salary` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_type` varchar(255) DEFAULT NULL,
+  `user_type` enum('DELIVERY','BUSSINESSCLERK','CENTERCLERK','INVENTORY','ACCOUNTER') DEFAULT NULL,
   `salary` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -848,6 +857,7 @@ CREATE TABLE `salary` (
 
 LOCK TABLES `salary` WRITE;
 /*!40000 ALTER TABLE `salary` DISABLE KEYS */;
+INSERT INTO `salary` VALUES (1,'DELIVERY',1500),(2,'ACCOUNTER',3000),(3,'BUSSINESSCLERK',2000);
 /*!40000 ALTER TABLE `salary` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -862,8 +872,7 @@ CREATE TABLE `sector` (
   `ins_id` varchar(20) DEFAULT NULL,
   `alarmValue` double DEFAULT NULL,
   `sector_id` varchar(20) DEFAULT NULL,
-  `type` enum('CAR','TRAIN','PLANE') DEFAULT NULL,
-  `column_5` int(11) DEFAULT NULL,
+  `type` enum('CAR','TRAIN','PLANE','FLEX') DEFAULT NULL,
   `rows` int(11) DEFAULT NULL,
   `shelves` int(11) DEFAULT NULL,
   `units` int(11) DEFAULT NULL
@@ -876,6 +885,7 @@ CREATE TABLE `sector` (
 
 LOCK TABLES `sector` WRITE;
 /*!40000 ALTER TABLE `sector` DISABLE KEYS */;
+INSERT INTO `sector` VALUES ('0010001',0.8,'1','CAR',10,5,10);
 /*!40000 ALTER TABLE `sector` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1042,13 +1052,14 @@ DROP TABLE IF EXISTS `stockoutorder`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `stockoutorder` (
-  `order_id` varchar(20) DEFAULT NULL,
+  `order_id` varchar(20) NOT NULL,
   `time` date DEFAULT NULL,
   `transport` enum('CAR','PLANE','TRAIN') DEFAULT NULL,
   `target_ins` varchar(20) DEFAULT NULL,
   `ins_id` varchar(20) DEFAULT NULL,
   `passed` tinyint(1) DEFAULT NULL,
-  `loaded` tinyint(1) DEFAULT NULL
+  `loaded` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1102,7 +1113,9 @@ CREATE TABLE `user` (
   `user_type` enum('DELIVERY','BUSSINESSCLERK','CENTERCLERK','INVENTORY','ACCOUNTER','MANAGER','ADMINISTRATOR') DEFAULT NULL,
   `name` varchar(20) DEFAULT NULL,
   `gender` enum('MALE','FEMALE') DEFAULT NULL,
-  `last_paid` date DEFAULT NULL
+  `last_paid` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `user_id_uindex` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -1112,6 +1125,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES ('000000001','sx','123123','0010001',1,'DELIVERY','sx','MALE',NULL),('000000002','xzw','123123','0011001',1,'BUSSINESSCLERK','xzw','MALE',NULL),('000000003','txy','123123','0011002',1,'MANAGER','txy','FEMALE',NULL),('000000004','tzy','123123','0011003',1,'ADMINISTRATOR','tzy','FEMALE',NULL),('000000005','christine','123123','0010002',1,'CENTERCLERK','christine','FEMALE',NULL),('000000006','zoe','123123','0010003',1,'INVENTORY','zoe','FEMALE',NULL),('000000007','sunxu','123123','0011004',1,'ACCOUNTER','sunxu','FEMALE',NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1124,4 +1138,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-17 18:44:56
+-- Dump completed on 2016-12-18 17:44:52
