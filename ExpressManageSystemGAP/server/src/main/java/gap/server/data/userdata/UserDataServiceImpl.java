@@ -31,7 +31,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 	private String id_f = "id", username_f = "username",
 			password_f = "password", institution_f = "institution",
 			rank_f = "rank", userType_f = "user_type", name_f = "name",
-			gender_f = "gender", lastpaid_f = "lastpaid";
+			gender_f = "gender", lastpaid_f = "last_paid";
 	private InsertSQL insertSQL;
 	private UpdateSQL updateSQL;
 
