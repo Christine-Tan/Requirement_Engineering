@@ -60,12 +60,10 @@ public class RentDataServiceImpl extends UnicastRemoteObject implements
 				RentPO po = new RentPO(institution, money, lastPaid);
 				rents.add(po);
 			}
-			return rents;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return rents;
 	}
 
 	@Override

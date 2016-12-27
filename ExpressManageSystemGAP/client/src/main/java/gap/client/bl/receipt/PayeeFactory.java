@@ -48,18 +48,18 @@ public class PayeeFactory {
 		addTransFarePayee(transFareList);
 		addRentPayee(rentList);
 
-		if (payeeList.isEmpty()) {
-			System.out.println("未能成功生成付款单");
-			return null;
-		}
 
 		ArrayList<PayeeVO> payeeVOList = new ArrayList<>(payeeList.size());
-		for (Payee payee : payeeList) {
-			PayeeVO vo = payee.getVO();
-			if(vo!=null){
-				payeeVOList.add(payee.getVO());
-			}
-		}
+		if (!payeeList.isEmpty()) {
+	        for (Payee payee : payeeList) {
+	            PayeeVO vo = payee.getVO();
+	            if(vo!=null){
+	                payeeVOList.add(payee.getVO());
+	            }
+	        }
+        }else {
+            System.out.println("未能生成付款单");
+        }
 
 		return payeeVOList;
 	}
