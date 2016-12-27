@@ -9,19 +9,9 @@ import gap.client.ui.gapcomponents.GAPLabel;
 import gap.client.ui.gapcomponents.GAPTextField;
 import gap.client.vo.LogVO;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.util.List;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class LogQueryPanel extends JPanel {
 	JLabel to_jl, total_jl, result_jl;
@@ -40,10 +30,17 @@ public class LogQueryPanel extends JPanel {
 		total_jl = new GAPLabel("共有");
 		result_jl = new GAPLabel("条记录");
 		fromdate_jl = new GAPTextField();
-		if(logs.size())
-		fromdate_jl.setText(logs.get(logs.size() - 1).getDate().substring(0, 11));
+		if(logs.size()>0) {
+			fromdate_jl.setText(logs.get(logs.size() - 1).getDate().substring(0, 11));
+		}else{
+			fromdate_jl.setText("");
+		}
 		todate_jl = new GAPTextField();
-		todate_jl.setText(logs.get(0).getDate().substring(0, 11));
+		if(logs.size()>0) {
+			todate_jl.setText(logs.get(0).getDate().substring(0, 11));
+		}else{
+			todate_jl.setText("");
+		}
 		num_jl = new GAPTextField();
 		num_jl.setText(String.valueOf(logs.size()));
 		setStyle();
