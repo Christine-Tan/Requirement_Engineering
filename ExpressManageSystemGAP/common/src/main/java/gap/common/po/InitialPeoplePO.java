@@ -23,6 +23,7 @@ public class InitialPeoplePO implements Serializable {
 		
 		if(numbers==null){
 			numbers = new int[6];
+			System.out.println(numbers[0]);
 		}
 		
 		setBusinessHallNum(numbers[0]);

@@ -54,7 +54,7 @@ public class CityDataServiceImpl extends UnicastRemoteObject implements
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return new CityPO();
 	}
 
 	@Override
@@ -110,7 +110,7 @@ public class CityDataServiceImpl extends UnicastRemoteObject implements
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 }

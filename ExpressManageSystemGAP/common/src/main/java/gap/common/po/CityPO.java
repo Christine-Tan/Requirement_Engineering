@@ -18,6 +18,10 @@ public class CityPO implements Serializable {
 		this.longitude = longitude;
 	}
 
+	public CityPO() {
+
+	}
+
 	public String getCity() {
 		return city;
 	}

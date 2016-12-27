@@ -46,7 +46,8 @@ public class SalaryDataServiceImpl extends UnicastRemoteObject implements
 		// TODO Auto-generated method stub
 		try {
 			ResultSet re = NetModule.excutor
-					.excuteQuery("SELECT * FROM salary WHERE userType='"
+					.excuteQuery("SELECT * FROM salary WHERE " +
+							usertype_f+"='"
 							+ type.toString() + "';");
 			re.next();
 			double salary = re.getDouble(salary_f);
@@ -66,7 +67,8 @@ public class SalaryDataServiceImpl extends UnicastRemoteObject implements
 		double salary = po.getSalary();
 		try {
 			ResultSet re = NetModule.excutor
-					.excuteQuery("SELECT * FROM salary WHERE userType='"
+					.excuteQuery("SELECT * FROM salary WHERE " +
+							usertype_f+"='"
 							+ usertype.toString() + "';");
 			if (re.next())
 				return ResultMessage.EXISTED;
@@ -90,7 +92,8 @@ public class SalaryDataServiceImpl extends UnicastRemoteObject implements
 		double salary = po.getSalary();
 		try {
 			ResultSet re = NetModule.excutor
-					.excuteQuery("SELECT * FROM salary WHERE userType='"
+					.excuteQuery("SELECT * FROM salary WHERE " +
+							usertype_f+"='"
 							+ usertype.toString() + "';");
 			if (!re.next())
 				return ResultMessage.NOTFOUND;

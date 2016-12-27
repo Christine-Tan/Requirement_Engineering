@@ -36,7 +36,7 @@ public class InitialPOCreater {
 		//获得account
 		accountPOs = new ArrayList<>(dataController.getAllAccount());
 		List<CityPO> cityPOs = dataController.getAllCity();
-		
+//		System.out.println("city_num"+cityPOs.size()+"!!!");
 		cityMap = new HashMap<>(cityPOs.size());
 		
 		for(CityPO cityPO:cityPOs){
@@ -44,9 +44,10 @@ public class InitialPOCreater {
 			InitialPeoplePO peoplePO = new InitialPeoplePO(cityName);
 			cityMap.put(cityName, peoplePO);
 		}
-		
+
 		institutionPOs = dataController.getInititution();
-		
+
+
 		//计算城市对应的机构数和人员数
 		calculatePeopleAndIns();
 		
@@ -104,11 +105,15 @@ public class InitialPOCreater {
 		String ins_id = institution.getInsId();
 		InstitutionType type = institution.getInsType();
 		InitialPeoplePO peoplePO = cityMap.get(cityName);
-		
+
+		System.out.println("city_map="+cityMap);
+		System.out.println("city_name="+cityName);
+
 		switch(type){
 			
 			case BUSSINESS:
 			{
+
 				peoplePO.businessHallNum++;
 				
 				int courierNum = dataController.getPeopleNum(ins_id, UserType.DELIVERY);
