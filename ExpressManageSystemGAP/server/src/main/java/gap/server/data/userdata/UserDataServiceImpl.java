@@ -55,7 +55,8 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 		try {
 			List<UserPO> users = new ArrayList<UserPO>();
 			ResultSet re = NetModule.excutor
-					.excuteQuery("SELECT * FROM user WHERE userType='"
+					.excuteQuery("SELECT * FROM user WHERE "+userType_f+
+							"='"
 							+ userType + "';");
 			while (re.next()) {
 				users.add(getByResultSet(re));
@@ -65,7 +66,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 	public ResultMessage add(UserPO po) throws RemoteException {
@@ -120,7 +121,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new UserPO();
 	}
 
 	public ResultMessage modify(UserPO po) throws RemoteException {
@@ -196,7 +197,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new UserPO();
 	}
 
 	@Override
@@ -220,7 +221,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -262,7 +263,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 	// 通过结果集获得单一userPO对象
@@ -288,7 +289,7 @@ public class UserDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new UserPO();
 	}
 
 	@Override

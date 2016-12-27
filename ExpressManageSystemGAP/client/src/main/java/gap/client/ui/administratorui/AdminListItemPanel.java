@@ -3,32 +3,18 @@ package gap.client.ui.administratorui;
 import gap.client.blcontroller.InstitutionController;
 import gap.client.blcontroller.UserController;
 import gap.client.ui.UITools.SwingConsole;
-import gap.client.ui.gapcomponents.ComponentStyle;
-import gap.client.ui.gapcomponents.GAPButton;
-import gap.client.ui.gapcomponents.GAPComboBox;
-import gap.client.ui.gapcomponents.GAPLabel;
-import gap.client.ui.gapcomponents.GAPTextField;
+import gap.client.ui.gapcomponents.*;
 import gap.client.vo.InstitutionVO;
 import gap.client.vo.UserVO;
 import gap.common.util.Gender;
 import gap.common.util.UserType;
 
-import java.awt.Color;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 public class AdminListItemPanel extends JPanel {
 	// 列表中所有的项
@@ -135,9 +121,8 @@ public class AdminListItemPanel extends JPanel {
 			// 初始化下拉框列表项
 			usertypes = UserType.values();
 			for (int i = 0; i < usertypes.length; i++) {
-				if (!usertypes[i].toString().equals("ADMINISTRATOR")) {
 					usertype_list.addItem(usertypes[i].toString());
-				}
+
 			}
 			usertype_list.setSelectedIndex(0);
 
