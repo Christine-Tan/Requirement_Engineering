@@ -14,7 +14,7 @@ public class LoginFrame extends JFrame {
     LoginPanel loginPanel;
 
     Image icon;
-    String iconPath = "images/pikachu.png";
+    String iconPath = "client/images/pikachu.png";
 
     /**
      * Launch the application.

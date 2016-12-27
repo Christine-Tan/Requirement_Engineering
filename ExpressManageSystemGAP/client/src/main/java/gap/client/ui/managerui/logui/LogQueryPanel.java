@@ -40,6 +40,7 @@ public class LogQueryPanel extends JPanel {
 		total_jl = new GAPLabel("共有");
 		result_jl = new GAPLabel("条记录");
 		fromdate_jl = new GAPTextField();
+		if(logs.size())
 		fromdate_jl.setText(logs.get(logs.size() - 1).getDate().substring(0, 11));
 		todate_jl = new GAPTextField();
 		todate_jl.setText(logs.get(0).getDate().substring(0, 11));

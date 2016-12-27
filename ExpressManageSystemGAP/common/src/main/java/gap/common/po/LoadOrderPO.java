@@ -27,6 +27,10 @@ public class LoadOrderPO implements Order{
 		this.comment = comment;
 	}
 
+	public LoadOrderPO() {
+
+	}
+
 	public double getPrice() {
 		return price;
 	}

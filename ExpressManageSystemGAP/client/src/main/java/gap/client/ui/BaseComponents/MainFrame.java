@@ -38,7 +38,7 @@ public class MainFrame extends JFrame {
 	private GridBagConstraints gcons;
 
 	Image icon;
-	String iconPath="images/pikachu.png";
+	String iconPath="client/images/pikachu.png";
 
 	public MainFrame() {
 		try {

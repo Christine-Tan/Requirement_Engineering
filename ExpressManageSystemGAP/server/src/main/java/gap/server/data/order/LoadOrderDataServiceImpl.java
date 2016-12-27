@@ -96,7 +96,7 @@ public class LoadOrderDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new LoadOrderPO();
 	}
 
 	@Override
@@ -158,7 +158,7 @@ public class LoadOrderDataServiceImpl extends UnicastRemoteObject implements
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -201,7 +201,7 @@ public class LoadOrderDataServiceImpl extends UnicastRemoteObject implements
 			e.printStackTrace();
 		}
 
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
